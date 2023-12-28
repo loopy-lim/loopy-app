@@ -1,9 +1,9 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 
 const HomePage = () => {
   return (
-    <View>
+    <View className="px-6 bg-white flex-1">
       <Text>Home page</Text>
       <Link href={"bus"}>bus</Link>
     </View>
