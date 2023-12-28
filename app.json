@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "loopy-lim",
+    "slug": "loopy-lim",
+    "scheme": "loopy-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"],
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  },
+  "web": {
+    "bundler": "metro"
+  }
+}
