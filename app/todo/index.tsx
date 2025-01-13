@@ -1,17 +1,16 @@
-import { Link, Stack } from "expo-router";
+import { Stack } from "expo-router";
 import { Text, View } from "react-native";
 
-const HomePage = () => {
+function TodoPage ()  {
   return (
     <View className="px-6 bg-white flex-1">
       <Stack.Screen options={{
-        title: 'Home',
+        title: 'Todo',
         headerTintColor: '#004BFF',
       }} />
-      <Text>Home page</Text>
-      <Link href="todo">todo</Link>
+      <Text>Todo page</Text>
     </View>
   );
 };
 
-export default HomePage;
+export default TodoPage;
