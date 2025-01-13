@@ -42,6 +42,8 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - ExpoNetwork (7.0.5):
+    - ExpoModulesCore
   - ExpoSplashScreen (0.29.20):
     - ExpoModulesCore
   - FBLazyVector (0.76.6)
@@ -1285,7 +1287,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-safe-area-context (4.12.0):
+  - react-native-safe-area-context (5.1.0):
     - React-Core
   - React-nativeconfig (0.76.6)
   - React-NativeModulesApple (0.76.6):
@@ -1596,7 +1598,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (4.4.0):
+  - RNScreens (4.5.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1634,6 +1636,7 @@ DEPENDENCIES:
   - ExpoKeepAwake (from `../node_modules/expo-keep-awake/ios`)
   - ExpoLinking (from `../node_modules/expo-linking/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
+  - ExpoNetwork (from `../node_modules/expo-network/ios`)
   - ExpoSplashScreen (from `../node_modules/expo-splash-screen/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - fmt (from `../node_modules/react-native/third-party-podspecs/fmt.podspec`)
@@ -1732,6 +1735,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-linking/ios"
   ExpoModulesCore:
     :path: "../node_modules/expo-modules-core"
+  ExpoNetwork:
+    :path: "../node_modules/expo-network/ios"
   ExpoSplashScreen:
     :path: "../node_modules/expo-splash-screen/ios"
   FBLazyVector:
@@ -1879,6 +1884,7 @@ SPEC CHECKSUMS:
   ExpoKeepAwake: 1f74cdf53ab3b3aeb7110f18eb053c92e7c3e710
   ExpoLinking: a9e64f08d2bb4fc42e7441174f15cc535bb390ba
   ExpoModulesCore: 8d6f5e6ce2bddc1240777d3e338686cd67ccfd45
+  ExpoNetwork: 15bf53158b439ce75e1df0df3a9ff5051c492db8
   ExpoSplashScreen: c2d80654bda344a827685bb27cb5920512730306
   FBLazyVector: be509404b5de73a64a74284edcaf73a5d1e128b1
   fmt: 10c6e61f4be25dc963c36bd73fc7b1705fe975be
@@ -1913,7 +1919,7 @@ SPEC CHECKSUMS:
   React-logger: 162c09cc432b02d4a0db31b1d98f6df5243a2679
   React-Mapbuffer: f760d2229640be48cb3c2d4832b5bbc3018123fc
   React-microtasksnativemodule: c7beb09cf9c61d18b24b51db99ac026796035bb3
-  react-native-safe-area-context: 142fade490cbebbe428640b8cbdb09daf17e8191
+  react-native-safe-area-context: 04803a01f39f31cc6605a5531280b477b48f8a88
   React-nativeconfig: 539ff4de6ce3b694e8e751080568c281c84903ce
   React-NativeModulesApple: 771cc40b086281b820fe455fedebbe4341fd0c90
   React-perflogger: 4e80a5b8d61dfb38024e7d5b8efaf9ce1037d31f
@@ -1943,7 +1949,7 @@ SPEC CHECKSUMS:
   ReactCommon: 832cdd669aeecd430d9ca1975d15676b38d0b263
   RNFlashList: 115dd44377580761bff386a0caebf165424cf16f
   RNGestureHandler: 511250b190a284388f9dd0d2e56c1df76f14cfb8
-  RNScreens: e52d2e7e5fa29266d6f8f68e8229452e5b2f4236
+  RNScreens: b51f1a8be0dd7bb470b757f6cca8ba878acb2000
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: be6f55a028e86c83ae066f018e9b5d24ffc45436
 
