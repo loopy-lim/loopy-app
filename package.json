@@ -4,14 +4,19 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start --dev-client",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web",
+    "android": "DARK_MODE=media expo run:android",
+    "ios": "DARK_MODE=media expo run:ios",
+    "web": "DARK_MODE=media expo start --web",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@gluestack-ui/icon": "^0.1.25",
+    "@gluestack-ui/nativewind-utils": "^1.0.26",
+    "@gluestack-ui/overlay": "^0.1.16",
+    "@gluestack-ui/toast": "^1.0.8",
     "@shopify/flash-list": "1.7.1",
     "@tanstack/react-query": "^5.64.0",
+    "babel-plugin-module-resolver": "^5.0.2",
     "expo": "52.0.25",
     "expo-constants": "~17.0.4",
     "expo-linking": "~7.0.4",
@@ -22,9 +27,12 @@
     "nativewind": "^4.1.23",
     "react": "18.3.1",
     "react-native": "0.76.6",
+    "react-native-css-interop": "^0.1.22",
     "react-native-gesture-handler": "~2.20.2",
-    "react-native-safe-area-context": "~5.1.0",
-    "react-native-screens": "~4.5.0"
+    "react-native-reanimated": "^3.16.7",
+    "react-native-safe-area-context": "^5.1.0",
+    "react-native-screens": "~4.5.0",
+    "react-native-svg": "15.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -34,8 +42,9 @@
     "eslint-config-expo": "~8.0.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "jscodeshift": "0.15.2",
     "prettier": "^3.4.2",
-    "tailwindcss": "3.3.2",
+    "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   },
