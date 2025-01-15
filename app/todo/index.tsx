@@ -1,16 +1,19 @@
-import { Stack } from "expo-router";
-import { Text, View } from "react-native";
+import { AddTodo } from '@/components/todo/AddTodo';
+import { TodoList } from '@/components/todo/TodoList';
+import { Stack } from 'expo-router';
+import { View } from 'react-native';
 
 function TodoPage() {
   return (
     <View className="px-6 bg-white flex-1">
       <Stack.Screen
         options={{
-          title: "Todo",
-          headerTintColor: "#004BFF",
+          title: 'Todo',
+          headerTintColor: '#004BFF',
         }}
       />
-      <Text>Todo page</Text>
+      <TodoList />
+      <AddTodo />
     </View>
   );
 }
