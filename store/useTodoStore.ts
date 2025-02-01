@@ -6,14 +6,14 @@ export interface TodoState {
   todos: {
     id: string;
     text: string;
-    done: boolean;
+    completed: boolean;
   }[];
 }
 
 interface TodoAction {
   addTodo: (todo: string) => void;
   removeTodo: (id: string) => void;
-  doneTodo: (id: string) => void;
+  completedTodo: (id: string) => void;
   clearTodos: () => void;
 }
 
@@ -31,17 +31,17 @@ export const useTodoStore = create<TodoStore>()((set) => ({
           {
             id: nanoid(),
             text: todo,
-            done: false,
+            completed: false,
           },
         ],
       })),
-    doneTodo: (id: string) =>
+    completedTodo: (id: string) =>
       set((state) => ({
         todos: state.todos.map((t) =>
           t.id === id
             ? {
                 ...t,
-                done: !t.done,
+                completed: !t.completed,
               }
             : t,
         ),

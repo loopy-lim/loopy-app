@@ -6,10 +6,15 @@ export function AddTodo() {
   const { addTodo } = useTodoStore((state) => state.actions);
   const [text, setText] = useState('');
 
+  const onAddTodo = () => {
+    addTodo(text);
+    setText('');
+  };
+
   return (
     <View>
-      <TextInput value={text} onChangeText={setText} />
-      <Button title="Add" onPress={() => addTodo(text)} />
+      <TextInput className="w-full py-2 px-4 border rounded-lg" value={text} onChangeText={setText} />
+      <Button title="Add" onPress={onAddTodo} />
     </View>
   );
 }

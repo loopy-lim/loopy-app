@@ -1,23 +1,20 @@
-import { Link, Stack } from 'expo-router';
-import { Text, View } from 'react-native';
+import Logo from '@/components/common/Logo';
+import { TodoPreview } from '@/components/todo/Preview';
+import { Stack } from 'expo-router';
+import { SafeAreaView, View } from 'react-native';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
-    <View className="px-6 bg-white flex-1 py-4">
+    <SafeAreaView className="bg-white flex-1">
       <Stack.Screen
         options={{
-          title: 'Home',
-          headerTintColor: '#004BFF',
+          title: 'Loopy',
         }}
       />
-      <Text>Home page</Text>
-      <Link href="todo">
-        <View className="py-2 px-4 border rounded">
-          <Text>todo</Text>
-        </View>
-      </Link>
-    </View>
+      <View className="px-4">
+        <Logo />
+        <TodoPreview />
+      </View>
+    </SafeAreaView>
   );
-};
-
-export default HomePage;
+}

@@ -17,7 +17,13 @@ const Layout = () => {
     return () => subscription.remove();
   }, []);
 
-  return <Stack />;
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    />
+  );
 };
 
 export default Layout;
