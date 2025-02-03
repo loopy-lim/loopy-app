@@ -1,31 +1,16 @@
 import { Todo } from '@/components/todo/Todo';
-import { TodoState } from '@/store/useTodoStore';
+import { useTodoStore } from '@/store/useTodoStore';
 import { Link } from 'expo-router';
 import { Text, View } from 'react-native';
 
-const todoMock: TodoState['todos'][0][] = [
-  {
-    id: '1',
-    text: 'Buy milk',
-    completed: false,
-  },
-  {
-    id: '2',
-    text: 'Buy eggs',
-    completed: false,
-  },
-  {
-    id: '3',
-    text: 'Buy bread',
-    completed: false,
-  },
-];
-
 export function TodoPreview() {
+  const todo = useTodoStore((state) => state.todos);
+
   return (
-    <View>
+    <View className="rounded-lg border border-slate-300 p-4 my-4">
+      <Text className="py-2 font-semibold text-lg">TODO</Text>
       <View>
-        {todoMock.map((todo) => (
+        {todo.map((todo) => (
           <Todo key={todo.id} todo={todo} />
         ))}
       </View>

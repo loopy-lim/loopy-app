@@ -21,8 +21,26 @@ interface TodoStore extends TodoState {
   actions: TodoAction;
 }
 
+const todoMock: TodoState['todos'][0][] = [
+  {
+    id: '1',
+    text: 'Buy milk',
+    completed: false,
+  },
+  {
+    id: '2',
+    text: 'Buy eggs',
+    completed: false,
+  },
+  {
+    id: '3',
+    text: 'Buy bread',
+    completed: false,
+  },
+];
+
 export const useTodoStore = create<TodoStore>()((set) => ({
-  todos: [],
+  todos: todoMock,
   actions: {
     addTodo: (todo: string) =>
       set((state) => ({
