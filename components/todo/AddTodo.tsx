@@ -1,6 +1,8 @@
+import { Button, ButtonText } from '@/components/ui/button';
+import { FormControl } from '@/components/ui/form-control';
+import { Input, InputField } from '@/components/ui/input';
 import { useTodoStore } from '@/store/useTodoStore';
 import { useState } from 'react';
-import { Button, TextInput, View } from 'react-native';
 
 export function AddTodo() {
   const { addTodo } = useTodoStore((state) => state.actions);
@@ -12,9 +14,13 @@ export function AddTodo() {
   };
 
   return (
-    <View>
-      <TextInput className="w-full py-2 px-4 border rounded-lg" value={text} onChangeText={setText} />
-      <Button title="Add" onPress={onAddTodo} />
-    </View>
+    <FormControl className="flex-row gap-4 w-full">
+      <Input variant="outline" className="flex-1">
+        <InputField placeholder="오늘 할 일은...🤔" value={text} onChange={(e) => setText(e.nativeEvent.text)} />
+      </Input>
+      <Button variant="outline" action="primary" onPress={onAddTodo}>
+        <ButtonText>ADD</ButtonText>
+      </Button>
+    </FormControl>
   );
 }
