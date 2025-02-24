@@ -1,28 +1,21 @@
-import { focusManager } from '@tanstack/react-query';
 import { Stack } from 'expo-router/stack';
-import { useEffect } from 'react';
-import { AppState, AppStateStatus, Platform } from 'react-native';
 import '../global.css';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useOnlineManager } from '@/hooks/tanstack-query/useOnlineManager';
 
-function onAppStateChange(status: AppStateStatus) {
-  if (Platform.OS !== 'web') {
-    focusManager.setFocused(status === 'active');
-  }
-}
+const queryClient = new QueryClient();
 
 const Layout = () => {
-  useEffect(() => {
-    const subscription = AppState.addEventListener('change', onAppStateChange);
-
-    return () => subscription.remove();
-  }, []);
+  useOnlineManager();
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    />
+    <QueryClientProvider client={queryClient}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      />
+    </QueryClientProvider>
   );
 };
 

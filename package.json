@@ -19,7 +19,7 @@
     "@gluestack-ui/overlay": "^0.1.16",
     "@gluestack-ui/toast": "^1.0.8",
     "@shopify/flash-list": "1.7.1",
-    "@tanstack/react-query": "^5.64.0",
+    "@tanstack/react-query": "^5.66.9",
     "babel-plugin-module-resolver": "^5.0.2",
     "expo": "52.0.25",
     "expo-constants": "~17.0.4",
@@ -45,6 +45,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@expo/webpack-config": "^19.0.1",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/react": "~18.3.12",
     "eslint": "^8.57.0",
     "eslint-config-expo": "~8.0.1",

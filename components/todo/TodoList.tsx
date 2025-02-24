@@ -1,10 +1,10 @@
 import { Todo } from '@/components/todo/Todo';
-import { useTodoStore } from '@/store/useTodoStore';
+import { useTodoQuery } from '@/hooks/todos/useTodoQuery';
 import { Stack } from 'expo-router';
 import { View } from 'react-native';
 
 export function TodoList() {
-  const todos = useTodoStore((state) => state.todos);
+  const { data: todos } = useTodoQuery();
 
   return (
     <View>
