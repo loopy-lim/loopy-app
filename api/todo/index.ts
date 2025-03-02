@@ -1,5 +1,5 @@
 import { BaseDto } from '@/api/dto';
-import { ResponseGetTodo, RequestPostCreateTodo } from '@/api/todo/dto';
+import { ResponseGetTodo, RequestPostCreateTodo, RequestPostCompletedTodo as RequestPostCompletedTodo, ResponsePostCompletedTodo } from '@/api/todo/dto';
 
 export const getTodos = async () => {
   return fetch('http://localhost:3000/todos')
@@ -17,4 +17,16 @@ export const postCreateTodo = async ({ title }: RequestPostCreateTodo) => {
   })
     .then((response) => response.json())
     .then((json) => new BaseDto(json).data);
+};
+
+
+export const postCompletedTodo = async ({ id }: RequestPostCompletedTodo) => {
+  return fetch(`http://localhost:3000/todos/completed/${id}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => new BaseDto<ResponsePostCompletedTodo>(json).data);
 };

@@ -12,3 +12,13 @@ export class ResponseGetTodo {
 export interface RequestPostCreateTodo {
   title: string;
 }
+
+export interface RequestPostCompletedTodo {
+  id: number;
+}
+
+export interface ResponsePostCompletedTodo {
+  id: number;
+  completed: boolean;
+  title: string;
+}
